@@ -1,0 +1,21 @@
+# Virtual environment
+friday_env/
+
+# Kokoro model files (too large for GitHub, users download separately)
+*.onnx
+*.bin
+
+# Temporary audio recorded during use
+temp_audio.wav
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
