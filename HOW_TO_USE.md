@@ -154,6 +154,15 @@ Install each package one by one — do not paste all at once:
 ```bash
 pip install --upgrade pip
 ```
+pip install -r requirements.txt
+
+**Verify all packages are installed:**
+```bash
+pip list
+```
+
+After running the requirement.txt file directly, go to the Part 4. 
+If the requirement.txt file raises any error, then you can Install the libraries below. 
 
 ```bash
 pip install faster-whisper

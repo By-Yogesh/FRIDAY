@@ -1,0 +1,13 @@
+# FRIDAY — AI Voice Assistant
+# Install all dependencies with:
+#   pip install -r requirements.txt
+
+faster-whisper
+kokoro-onnx
+webrtcvad-wheels
+pyaudio
+sounddevice
+soundfile
+keyboard
+ollama
+numpy
