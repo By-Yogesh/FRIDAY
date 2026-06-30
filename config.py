@@ -22,3 +22,8 @@ Never say "Certainly!" or "Of course!" or sound robotic.
 Keep replies short unless asked for detail.
 Reply in 1-3 sentences max for casual questions.
 """
+
+# --- Weather Settings ---
+WEATHER_API_KEY = "4ef65b6554c688b19d2e2d522a29e03c"
+WEATHER_CITY = "New Delhi"
+WEATHER_UNITS = "metric"         # metric = Celsius, imperial = Fahrenheit
