@@ -18,4 +18,4 @@ def initialize_setup():
     open_vscode()
     time.sleep(1)  # small delay so apps don't clash while opening
     
-    return "Your Setup is initialized. VS Code opened, GitHub opened in chrome, LinkedIn and Instagram are also opened."
+    return "Your Setup is initialized. VS Code opened successfully, GitHub opened in chrome, LinkedIn and Instagram are also opened."

@@ -111,8 +111,8 @@ Open Command Prompt and run these commands one by one:
 # Go to the drive/folder where you want to install FRIDAY
 cd C:\
 
-# Clone the project (replace YOUR_USERNAME with the actual GitHub username)
-git clone https://github.com/YOUR_USERNAME/FRIDAY.git
+# Clone the project
+git clone https://github.com/By-Yogesh/FRIDAY.git
 
 # Go into the project folder
 cd FRIDAY
@@ -154,7 +154,9 @@ Install each package one by one — do not paste all at once:
 ```bash
 pip install --upgrade pip
 ```
+```bash
 pip install -r requirements.txt
+```
 
 **Verify all packages are installed:**
 ```bash

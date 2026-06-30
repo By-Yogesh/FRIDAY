@@ -1,36 +1,37 @@
 from actions.apps import open_vscode, open_notepad, open_calculator, open_chrome
 from actions.browser import google_search, open_google
 from actions.init_setup import initialize_setup
-from llm import ask_friday
+
+# Signal returned when query needs LLM (not a command)
+NEEDS_LLM = "__LLM__"
 
 
 def route_command(text):
-    text_lower = text.lower()
+    t = text.lower()
 
-    # --- Setup routine ---
-    if "initialize my setup" in text_lower or "initialize setup" in text_lower:
+    if any(x in t for x in ["initialize my setup", "initialize setup"]):
         return initialize_setup()
 
-    # --- App opening ---
-    if "open vs code" in text_lower or "open visual studio" in text_lower:
+    if any(x in t for x in ["open vs code", "open visual studio"]):
         return open_vscode()
 
-    if "open notepad" in text_lower:
+    if "open notepad" in t:
         return open_notepad()
 
-    if "open calculator" in text_lower:
+    if "open calculator" in t:
         return open_calculator()
 
-    if "open chrome" in text_lower:
+    if "open chrome" in t:
         return open_chrome()
 
-    if "open google" in text_lower:
+    if "open google" in t:
         return open_google()
 
-    # --- Google search ---
-    if "search" in text_lower and "google" in text_lower:
-        query = text_lower.replace("search", "").replace("on google", "").replace("google", "").strip()
+    if "search" in t and "google" in t:
+        query = (t.replace("search", "")
+                  .replace("on google", "")
+                  .replace("google", "")
+                  .strip())
         return google_search(query)
 
-    # --- Nothing matched, send to LLM for normal conversation ---
-    return ask_friday(text)
+    return NEEDS_LLM
